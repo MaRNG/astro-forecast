@@ -2,15 +2,15 @@
 
 ## MVP
 APIs:
-Built using weather forecast https://open-meteo.com/en/docs?timezone=Europe%2FBerlin&latitude=50.1037&longitude=13.7334&hourly=temperature_2m,rain,cloud_cover_low,cloud_cover_mid,cloud_cover,cloud_cover_high
-Seeing?
+- Built using weather forecast https://open-meteo.com/en/docs?timezone=Europe%2FBerlin&latitude=50.1037&longitude=13.7334&hourly=temperature_2m,rain,cloud_cover_low,cloud_cover_mid,cloud_cover,cloud_cover_high
+- Seeing?
 
-Inputs:
-Set (current) location -> extract lat, lon
-Set (current) time GMT -> UTC
+### Inputs:
+- Set (current) location -> extract lat, lon
+- Set (current) time GMT -> UTC
 
-Outputs:
-Moon phases (all + current)
-Moon alt
-Time phases (night, sunrise, dawn...)
-Astro score (moon phase + moon alt + weather? + seeing)
+### Outputs:
+- Moon phases (all + current)
+- Moon alt
+- Time phases (night, sunrise, dawn...)
+- Astro score (moon phase + moon alt + weather? + seeing)
