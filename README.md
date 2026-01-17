@@ -14,3 +14,10 @@ APIs:
 - Moon alt
 - Time phases (night, sunrise, dawn...)
 - Astro score (moon phase + moon alt + weather? + seeing)
+
+## Pages
+### Homepage
+ - +7 days astro forecast - astro score, moon phase, moon rise/dawn/alt (min - max), weather
+ - quick cards redirects
+  - detailed forecast
+  - other tools (Stellarium...)
