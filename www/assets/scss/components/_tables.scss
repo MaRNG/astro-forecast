@@ -1,0 +1,60 @@
+/* Editorial Table */
+.data-table {
+    width: 100%;
+    border-spacing: 0;
+}
+
+.data-table th {
+    text-align: left;
+    color: var(--text-secondary);
+    font-weight: 400;
+    font-size: 0.85rem;
+    padding-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.data-table td {
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--glass-border);
+    font-size: 1.1rem;
+    color: var(--text-primary);
+}
+
+.data-table tr:last-child td {
+    border: none;
+}
+
+.highlight-pill {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 0;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* --- V4.5 Table & Event Rows --- */
+.event-row td {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.event-row.gold td {
+    color: var(--accent-gold);
+    border-color: rgba(255, 214, 10, 0.2);
+}
+
+.event-row.blue td {
+    color: var(--accent-glow);
+    border-color: rgba(0, 242, 255, 0.2);
+}

@@ -1,0 +1,40 @@
+/* Red Mode V2 */
+body.red-mode {
+    --accent-glow: #ff2a2a;
+    --accent-gold: #ff4d4d;
+    --text-primary: #ffb3b3;
+    --text-secondary: #802020;
+    --glass-surface: rgba(50, 0, 0, 0.2);
+    --glass-border: rgba(255, 0, 0, 0.15);
+
+    /* --- Red Mode Updates --- */
+    --bg-deep: #050000;
+    --gauge-track: rgba(255, 0, 0, 0.1);
+    --gauge-val: #ff0000;
+    --accent-good: #ff0000;
+    /* Force Green to Red in Red Mode */
+}
+
+body.red-mode .celestial-orb {
+    background: radial-gradient(circle at 30% 30%, rgba(255, 100, 100, 0.9), rgba(150, 0, 0, 0.4) 40%, #200 70%);
+    box-shadow: 0 0 60px rgba(255, 0, 0, 0.3);
+}
+
+body.red-mode .hero-text h1 {
+    background: linear-gradient(to right, #ff9999, #ff0000);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+body.red-mode .dock-item:hover,
+body.red-mode .dock-item.active {
+    background: rgba(255, 0, 0, 0.1);
+    color: #ff5555;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.1);
+}
+
+/* Ensure good accent texts (like "Excellent") turn red */
+body.red-mode .hero-desc-text {
+    color: #ff4d4d;
+}

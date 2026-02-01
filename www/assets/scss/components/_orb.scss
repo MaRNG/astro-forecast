@@ -1,0 +1,87 @@
+/* Hero Section - The Orb */
+.hero-orb-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+    padding: 0 2rem;
+}
+
+.orb-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.celestial-orb {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.9), rgba(160, 196, 255, 0.4) 40%, rgba(160, 196, 255, 0.1) 70%);
+    box-shadow: 0 0 60px rgba(160, 196, 255, 0.3), inset 0 0 20px rgba(255, 255, 255, 0.5);
+    animation: breathe 6s ease-in-out infinite;
+    position: relative;
+    z-index: 2;
+}
+
+.orb-ring {
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    animation: spin 20s linear infinite;
+}
+
+.orb-ring::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: 50%;
+    width: 4px;
+    height: 4px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #fff;
+}
+
+.orb-transparency {
+    position: absolute;
+    font-family: var(--font-display);
+    font-size: 3rem;
+    font-weight: 700;
+    color: #fff;
+    z-index: 3;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes breathe {
+
+    0%,
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 60px rgba(160, 196, 255, 0.3);
+    }
+
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 80px rgba(160, 196, 255, 0.5);
+    }
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 900px) {
+    .hero-orb-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+}

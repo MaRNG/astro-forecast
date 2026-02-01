@@ -1,0 +1,31 @@
+/* Layout */
+.app-shell {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    z-index: 1;
+    /* Under noise */
+}
+
+/* Main Canvas */
+.main-canvas {
+    flex: 1;
+    overflow-y: auto;
+    padding: 2rem;
+    max-width: 1600px;
+    margin: 0 auto;
+    scrollbar-width: none;
+}
+
+.main-canvas::-webkit-scrollbar {
+    display: none;
+}
+
+@media (max-width: 900px) {
+    .app-shell {
+        flex-direction: column;
+        height: auto;
+        min-height: 100vh;
+    }
+}

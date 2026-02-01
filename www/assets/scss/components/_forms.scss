@@ -1,0 +1,26 @@
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.input-group label {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.modal-input {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0.8rem;
+    color: #fff;
+    font-family: var(--font-tech);
+    font-size: 1rem;
+    outline: none;
+}
+
+.modal-input:focus {
+    border-color: var(--accent-glow);
+}

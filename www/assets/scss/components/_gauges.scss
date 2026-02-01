@@ -1,0 +1,9 @@
+/* --- Themed Gauge --- */
+.circular-chart .circle-bg {
+    stroke: var(--gauge-track);
+}
+
+.circular-chart .circle {
+    stroke: var(--gauge-val);
+    transition: stroke 0.3s;
+}

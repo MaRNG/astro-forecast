@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AstroCast V4</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+<div class="app-shell">
+    <!-- Floating Dock Sidebar -->
+    <nav class="sidebar-dock">
+        <div class="brand-mark">
+            <i class="fa-solid fa-rocket"></i>
+            <span>AstroCast</span>
+        </div>
+
+        <div class="dock-nav">
+            <a href="index.html" class="dock-item active">
+                <i class="fa-solid fa-layer-group"></i>
+                <span>Overview</span>
+            </a>
+            <a href="detail.html" class="dock-item">
+                <i class="fa-solid fa-chart-gantt"></i>
+                <span>Forecast</span>
+            </a>
+            <a href="moon.html" class="dock-item">
+                <i class="fa-solid fa-moon"></i>
+                <span>Moon</span>
+            </a>
+            <a href="deepsky.html" class="dock-item">
+                <i class="fa-solid fa-infinity"></i>
+                <span>DeepSky</span>
+            </a>
+        </div>
+
+        <!-- Location Block -->
+        <!-- Location Block -->
+        <div class="lang-select-container">
+            <select class="lang-select">
+                <option value="en" selected>ENG - English</option>
+                <option value="cz">CZE - Čeština</option>
+                <option value="de">DEU - Deutsch</option>
+                <option value="fr">FRA - Français</option>
+            </select>
+        </div>
+
+        <div class="dock-footer">
+            <a href="#" class="dock-item" id="red-mode-toggle" title="Night Vision">
+                <i class="fa-solid fa-eye"></i>
+                <span>Night Mode</span>
+            </a>
+        </div>
+
+        <!-- Location Block -->
+        <div class="dock-location">
+            <div class="loc-label">Location</div>
+            <div class="loc-data">
+                <div class="loc-info">
+                    <div id="sidebar-loc-name" class="loc-name">Prague, CZ</div>
+                    <div id="sidebar-loc-coords" class="loc-coords">50.07N, 14.43E</div>
+                </div>
+                <i class="fa-solid fa-pencil action-icon" id="edit-loc-btn"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-canvas">
+
+        <!-- Full Width Hero Score Card -->
+        <div class="hero-card glass-card span-3" style="width: 100%; margin-bottom: 2rem; border-radius: 0;">
+            <span class="hero-label-top">Tonight's Astro Score</span>
+            <div class="hero-gauge-lg">
+                <svg viewBox="0 0 36 36" class="circular-chart" style="width: 100%; height: 100%;">
+                    <path class="circle-bg" stroke-width="2.5" fill="none"
+                          d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                    <path class="circle" stroke-dasharray="85, 100" stroke-width="2.5" fill="none"
+                          d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                </svg>
+                <div class="hero-gauge-val">85</div>
+            </div>
+            <p class="hero-desc-text">Excellent conditions. Perfect for deep sky imaging.</p>
+        </div>
+
+
+        <!-- Masonry Grid -->
+        <div class="glass-grid">
+
+            <!-- Hourly Forecast Table -->
+            <div class="glass-card span-2">
+                <div class="card-head">
+                    <h3>Hourly Forecast</h3>
+                    <span class="btn-text" onclick="window.location.href='detail.html'">Full Log <i
+                                class="fa-solid fa-arrow-right"></i></span>
+                </div>
+                <table class="data-table">
+                    <thead>
+                    <tr>
+                        <th>Local Time</th>
+                        <th>Condition</th>
+                        <th>Temp</th>
+                        <th>Moon Alt</th>
+                        <th>Seeing</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="event-row gold">
+                        <td colspan="5"><i class="fa-solid fa-sun"></i> Sunset 18:45</td>
+                    </tr>
+                    <tr>
+                        <td>19:00</td>
+                        <td>Twilight</td>
+                        <td>4°C</td>
+                        <td>-10°</td>
+                        <td>3/5</td>
+                    </tr>
+                    <tr class="event-row blue">
+                        <td colspan="5"><i class="fa-solid fa-star"></i> Astro Dark Begins 20:15</td>
+                    </tr>
+                    <tr>
+                        <td>21:00</td>
+                        <td>Clear</td>
+                        <td>3°C</td>
+                        <td>-40°</td>
+                        <td>5/5</td>
+                    </tr>
+                    <tr>
+                        <td>22:00</td>
+                        <td>Clear (Best)</td>
+                        <td>2°C</td>
+                        <td>-45°</td>
+                        <td>5/5</td>
+                    </tr>
+                    <tr>
+                        <td>23:00</td>
+                        <td>Clear</td>
+                        <td>1°C</td>
+                        <td>-48°</td>
+                        <td>4/5</td>
+                    </tr>
+                    <tr class="event-row blue">
+                        <td colspan="5"><i class="fa-solid fa-star-half-stroke"></i> Astro Dark Ends 04:30</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Featured Target -->
+            <div class="glass-card">
+                <div class="card-head">
+                    <h3>Target of the Night</h3>
+                </div>
+                <div class="target-preview">
+                    <div class="target-icon"><i class="fa-solid fa-meteor"></i></div>
+                    <div>
+                        <h2 style="font-family: var(--font-display); line-height: 1;">Orion</h2>
+                        <span style="color: var(--text-secondary)">M42 Nebula • Mag 4.0</span>
+                    </div>
+                </div>
+                <p style="margin-top: 1.5rem; color: var(--text-secondary); line-height: 1.6;">
+                    Best visibility at 22:30. Crystal clear conditions expected. Ideal for 80mm+ refractors.
+                </p>
+            </div>
+
+            <!-- Moon Phase (Small) -->
+            <div class="glass-card">
+                <div class="card-head">
+                    <h3>Lunar State</h3>
+                </div>
+                <div style="display: flex; gap: 1rem; align-items: center;">
+                    <i class="fa-solid fa-moon" style="font-size: 3rem; color: var(--text-primary);"></i>
+                    <div>
+                        <div style="font-size: 1.5rem; font-family: var(--font-display);">98%</div>
+                        <div style="color: var(--text-secondary);">Waxing Gibbous</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Long Term (Wide) -->
+            <div class="glass-card span-2">
+                <div class="card-head">
+                    <h3>7-Day Outlook</h3>
+                </div>
+                <div style="display: flex; justify-content: space-between; text-align: center;">
+                    <div>
+                        <div style="color: var(--text-secondary); margin-bottom: 0.5rem;">Sun</div>
+                        <i class="fa-solid fa-cloud-moon"
+                           style="font-size: 1.2rem; margin-bottom: 0.5rem; display: block;"></i>
+                        <span style="font-family: var(--font-display); font-weight: 700;">70</span>
+                    </div>
+                    <div>
+                        <div style="color: var(--text-secondary); margin-bottom: 0.5rem;">Mon</div>
+                        <i class="fa-solid fa-cloud"
+                           style="font-size: 1.2rem; margin-bottom: 0.5rem; display: block;"></i>
+                        <span
+                                style="font-family: var(--font-display); font-weight: 700; color: var(--accent-danger);">30</span>
+                    </div>
+                    <div>
+                        <div style="color: var(--text-secondary); margin-bottom: 0.5rem;">Tue</div>
+                        <i class="fa-solid fa-star"
+                           style="font-size: 1.2rem; color: var(--accent-glow); margin-bottom: 0.5rem; display: block;"></i>
+                        <span
+                                style="font-family: var(--font-display); font-weight: 700; color: var(--accent-glow);">90</span>
+                    </div>
+                    <div>
+                        <div style="color: var(--text-secondary); margin-bottom: 0.5rem;">Wed</div>
+                        <i class="fa-solid fa-star"
+                           style="font-size: 1.2rem; color: var(--accent-glow); margin-bottom: 0.5rem; display: block;"></i>
+                        <span
+                                style="font-family: var(--font-display); font-weight: 700; color: var(--accent-glow);">92</span>
+                    </div>
+                    <div>
+                        <div style="color: var(--text-secondary); margin-bottom: 0.5rem;">Thu</div>
+                        <i class="fa-solid fa-smog"
+                           style="font-size: 1.2rem; margin-bottom: 0.5rem; display: block;"></i>
+                        <span style="font-family: var(--font-display); font-weight: 700;">50</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Mobile Bottom Nav -->
+    <nav class="bottom-nav">
+        <a href="index.html" class="b-item active"><i class="fa-solid fa-layer-group"></i></a>
+        <a href="detail.html" class="b-item"><i class="fa-solid fa-chart-gantt"></i></a>
+        <a href="moon.html" class="b-item"><i class="fa-solid fa-moon"></i></a>
+        <a href="deepsky.html" class="b-item"><i class="fa-solid fa-infinity"></i></a>
+    </nav>
+
+</div>
+
+<div id="location-modal" class="modal">
+    <div class="modal-content">
+        <h3>Update Location</h3>
+        <div class="input-group">
+            <label>Latitude (N)</label>
+            <input type="text" id="lat-input" class="modal-input" value="50.07">
+        </div>
+        <div class="input-group">
+            <label>Longitude (E)</label>
+            <input type="text" id="lon-input" class="modal-input" value="14.43">
+        </div>
+        <div class="modal-actions">
+            <button class="btn-modal btn-cancel" onclick="closeLocationModal()">Cancel</button>
+            <button class="btn-modal btn-save" onclick="saveLocation()">Save</button>
+        </div>
+    </div>
+</div>
+
+<script src="/assets/js/main.js"></script>
+</body>
+
+</html>

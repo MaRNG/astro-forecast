@@ -1,0 +1,191 @@
+/* Sidebar - Fixed Dock Style (Industrial) */
+.sidebar-dock {
+    width: 260px !important;
+    min-width: 260px !important;
+    margin: 1rem;
+    background: rgba(11, 17, 32, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem 1.5rem;
+    gap: 2rem;
+    flex-shrink: 0;
+    transition: none !important;
+}
+
+.sidebar-dock:hover {
+    width: 260px !important;
+    background: rgba(11, 17, 32, 0.95);
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+.brand-mark {
+    font-size: 1.8rem;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 0.8rem;
+    white-space: nowrap;
+    overflow: hidden;
+    padding-left: 0;
+}
+
+.brand-mark span {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.5rem;
+    opacity: 1;
+    transition: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.sidebar-dock:hover .brand-mark span {
+    opacity: 1;
+}
+
+.dock-nav {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.dock-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    padding: 0.8rem 1rem;
+    border-radius: 0;
+    border-left: 2px solid transparent;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: background 0.2s, color 0.2s;
+    width: 100%;
+}
+
+.dock-item span {
+    font-size: 0.9rem;
+    font-weight: 600;
+    opacity: 1;
+    transition: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.sidebar-dock:hover .dock-item span {
+    opacity: 1;
+}
+
+.dock-item:hover,
+.dock-item.active {
+    color: var(--text-primary);
+    background: rgba(255, 255, 255, 0.03);
+    border-left-color: var(--text-primary);
+    box-shadow: none;
+}
+
+.dock-footer {
+    width: 100%;
+    padding-right: 0;
+}
+
+/* --- Sidebar Location Refinement --- */
+.dock-location {
+    width: 100%;
+    margin-top: auto;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--glass-border);
+    border-radius: 4px;
+    /* Slight rounding for cohesion, or 0 for industrial */
+}
+
+.loc-label {
+    font-size: 0.7rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.loc-data {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.loc-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+}
+
+.loc-name {
+    font-weight: 600;
+    color: var(--text-primary);
+    font-size: 0.95rem;
+}
+
+.loc-coords {
+    font-family: var(--font-tech);
+    font-size: 0.8rem;
+    color: var(--accent-glow);
+    opacity: 0.8;
+}
+
+.action-icon {
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: color 0.2s, transform 0.2s;
+    font-size: 0.9rem;
+    padding: 0.5rem;
+}
+
+.action-icon:hover {
+    color: var(--accent-glow);
+    transform: scale(1.1);
+}
+
+/* --- Language Selector --- */
+.lang-select-container {
+    padding: 0 1rem;
+    margin-top: auto;
+    /* Push to bottom near footer */
+    width: 100%;
+}
+
+.lang-select {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-secondary);
+    padding: 0.5rem;
+    font-family: var(--font-tech);
+    font-size: 0.9rem;
+    border-radius: 0;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.lang-select:hover {
+    border-color: var(--text-primary);
+    color: var(--text-primary);
+}
+
+@media (max-width: 900px) {
+    .sidebar-dock {
+        display: none;
+    }
+}

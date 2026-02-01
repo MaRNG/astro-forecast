@@ -1,0 +1,26 @@
+:root {
+    --bg-deep: #020617;
+    /* High contrast dark blue */
+    --glass-surface: rgba(255, 255, 255, 0.08);
+    /* Higher opacity for contrast */
+    --glass-border: rgba(255, 255, 255, 0.12);
+    --glass-highlight: rgba(255, 255, 255, 0.18);
+
+    --accent-glow: #38bdf8;
+    /* Brighter Cyan */
+    --accent-gold: #fbbf24;
+    --accent-danger: #f87171;
+    --accent-good: #4ade80;
+
+    --gauge-track: rgba(255, 255, 255, 0.15);
+    --gauge-val: #38bdf8;
+    /* Default gauge color (Cyan) */
+
+    --text-primary: #ffffff;
+    --text-secondary: #cbd5e1;
+
+    --font-display: 'Inter', sans-serif;
+    --font-tech: 'Inter', sans-serif;
+
+    --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
